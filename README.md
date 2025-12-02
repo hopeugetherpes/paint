@@ -1,30 +1,43 @@
-# Microsoft Paint
+# 🖌️ Paint – MS Paint in your browser
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+A tiny, tongue-in-cheek recreation of classic Microsoft Paint, rebuilt for the web.  
+Same vibes, no `C:\Windows\System32` required.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/rxutns-projects/v0-microsoft-paint)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/J7dCOgAXbw8)
+<img width="806" height="625" alt="Screenshot 2025-12-02 at 14 30 56" src="https://github.com/user-attachments/assets/12880c7b-deac-4f3b-86db-b9a852da80df" />
 
-## Overview
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+> 💾 Fan project – not affiliated with or endorsed by Microsoft.
+>
+> Built just for fun, nostalgia and doodling in meetings.
 
-## Deployment
+---
 
-Your project is live at:
+## ✨ Features
 
-**[https://vercel.com/rxutns-projects/v0-microsoft-paint](https://vercel.com/rxutns-projects/v0-microsoft-paint)**
+- 🎨 **Classic UI clone**  
+  Pixel-perfect window chrome, menu bar, toolbar and color palette inspired by old-school MS Paint.
 
-## Build your app
+- 🖍️ **Drawing on the `<canvas>`**  
+  Freehand drawing with the pencil/brush tool on a resizable canvas.
 
-Continue building your app on:
+- 🧽 **Eraser & clear canvas**  
+  Oops? Just erase or wipe the whole thing and start again.
 
-**[https://v0.app/chat/J7dCOgAXbw8](https://v0.app/chat/J7dCOgAXbw8)**
+- 🎯 **Color picker**  
+  Click a swatch in the palette to switch drawing color instantly.
 
-## How It Works
+---
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## 🚀 Live demo
+
+👉 **[Open Paint in your browser](https://paint.anatole.co)**  
+
+---
+
+## 📦 Getting started
+
+Clone the repo:
+
+```bash
+git clone https://github.com/hopeugetherpes/paint.git
+cd paint
