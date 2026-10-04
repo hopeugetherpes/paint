@@ -47,7 +47,7 @@ export default function Component() {
   useEffect(() => {
     const canvas = canvasRef.current
     const context = canvas?.getContext("2d")
-    if (context) {
+    if (canvas && context) {
       context.fillStyle = "#FFFFFF"
       context.fillRect(0, 0, canvas.width, canvas.height)
     }
@@ -56,7 +56,7 @@ export default function Component() {
   const startDrawing = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const canvas = canvasRef.current
     const context = canvas?.getContext("2d")
-    if (context) {
+    if (canvas && context) {
       const rect = canvas.getBoundingClientRect()
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
@@ -70,7 +70,7 @@ export default function Component() {
     if (!isDrawing) return
     const canvas = canvasRef.current
     const context = canvas?.getContext("2d")
-    if (context) {
+    if (canvas && context) {
       const rect = canvas.getBoundingClientRect()
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
@@ -148,7 +148,7 @@ export default function Component() {
           <div className="w-8 bg-gray-300 p-0.5 border-r border-gray-400">
             <Button
               variant="ghost"
-              className={`w-7 h-7 p-0 min-w-0 mb-0.5 ${tool === "brush" ? "bg-gray-300 border border-gray-400 shadow-inner" : ""}`}
+              className={`w-7 h-7 p-0 min-w-0 mb-0.5 ${tool === "brush" ? "bg-gray-300 border border-gray-400 inset-shadow-sm" : ""}`}
               onClick={() => setTool("brush")}
             >
               <svg
@@ -167,7 +167,7 @@ export default function Component() {
             </Button>
             <Button
               variant="ghost"
-              className={`w-7 h-7 p-0 min-w-0 mb-0.5 ${tool === "eraser" ? "bg-gray-300 border border-gray-400 shadow-inner" : ""}`}
+              className={`w-7 h-7 p-0 min-w-0 mb-0.5 ${tool === "eraser" ? "bg-gray-300 border border-gray-400 inset-shadow-sm" : ""}`}
               onClick={() => setTool("eraser")}
             >
               <svg
@@ -185,7 +185,7 @@ export default function Component() {
               </svg>
             </Button>
           </div>
-          <div className="flex-grow overflow-auto border border-gray-400" style={{ width: "724px", height: "500px" }}>
+          <div className="grow overflow-auto border border-gray-400" style={{ width: "724px", height: "500px" }}>
             <canvas
               ref={canvasRef}
               width={2000}
