@@ -41,3 +41,22 @@ Clone the repo:
 ```bash
 git clone https://github.com/hopeugetherpes/paint.git
 cd paint
+corepack enable
+pnpm install --frozen-lockfile
+pnpm dev
+```
+
+Use Node.js 20.9 or newer and the pnpm version pinned in `package.json`.
+Vercel detects the Next.js project and the committed pnpm lockfile automatically.
+
+## 🔐 Dependency maintenance
+
+Run `pnpm audit` to check all dependencies, including development and optional
+packages. Security overrides in `pnpm-workspace.yaml` keep every transitive
+copy of PostCSS, Sharp and Lodash on patched releases.
+
+The styles use Tailwind CSS 4 to avoid the unpatched `braces` dependency in the
+older build pipeline. The existing Paint colours, fonts and layout are preserved.
+Supported browsers are Safari 16.4+, Chrome 111+ and Firefox 128+.
+
+Validate changes with `pnpm build` and `pnpm exec tsc --noEmit`.

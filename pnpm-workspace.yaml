@@ -1,0 +1,8 @@
+packages:
+  - '.'
+
+# Keep all transitive copies on patched releases, including Next.js internals.
+overrides:
+  'postcss@<8.5.28': '8.5.28'
+  'sharp@<0.35.4': '0.35.4'
+  'lodash@<4.18.1': '4.18.1'
