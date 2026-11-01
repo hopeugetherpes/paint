@@ -53,7 +53,7 @@ Vercel detects the Next.js project and the committed pnpm lockfile automatically
 
 Run `pnpm audit` to check all dependencies, including development and optional
 packages. Security overrides in `pnpm-workspace.yaml` keep every transitive
-copy of PostCSS, Sharp and Lodash on patched releases.
+copy of PostCSS, Sharp, Lodash and source-map-js on patched releases.
 
 The styles use Tailwind CSS 4 to avoid the unpatched `braces` dependency in the
 older build pipeline. The existing Paint colours, fonts and layout are preserved.
